@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.header { 
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #8082FF;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.header img{
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.question-box {
+    padding: 20px;
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaçamento entre os botões */
+  }
+
+button {
+    font-size: 15px;
+    background-color: #dce1ff;
+    color: #333;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    cursor: pointer; /* Aparece uma mãozinha ao passar o mouse */
+}
+
+.option:hover {
+    background-color:#c5cfff;
+    transform: scale(1.02); /* Leve zoom ao passar o rato */
+}
