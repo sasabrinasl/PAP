@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home-page.css">
     <title>Teste Vocacional</title>
 </head>
 
 <body>
-    <header class="header">
-         <img src="images/Captura de Tela 2024-12-04 às 15.15.15.png" alt="Teste Vocacional">
-     </header>
+    <header>
+        <div class="left-section">
+          <p>Vocatio</p>
+        </div>
+        <div class="right-section">
+          <button onclick="goToPage('page-register')">Iniciar Teste</button>
+          <img src="images/hamburger-menu.svg">
+        </div>
+    </header>
 
-     <div class="container">
-        <main class="question-box">
-
-          <p class="question">
-            Quando te envolves em um novo projeto, qual parte mais te motiva?
-          </p>
-
-          <ul class="options">
-            <button type="submit" class="option">a) Desenvolver algo criativo e inovador, transformando ideias em realidade</button>
-            <button type="submit" class="option">b) Organizar o projeto e definir metas claras, garantindo que tudo siga um plano</button>
-            <button type="submit" class="option">c) Assumir a liderança e tomar decisões rápidas, buscando o sucesso da equipe</button>
-            <button type="submit" class="option">d) Trabalhar em colaboração com os outros, criando um ambiente harmônico e produtivo</button>
-          </ul>
-        </main>
+    <!--Página Inicial-->
+     <div class="home-page">
+        <div class="vocatio-box">
+          <h1>Vocatio</h1>
+          <p class="subtitle">Descubra a sua vocação!</p>
+        </div>
+        
+        <div class="description-box">
+          <p class="description-title">O que é o Vocatio? </p>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula leo eu erat pretium, vitae viverra erat condimentum.</p>
+        </div>
+        
+        <div class="start-test">
+          <button onclick="goToPage('page-register')">Iniciar Teste</button>
+        </div>
       </div>
-</body>
+  </body>
 </html>

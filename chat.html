@@ -15,53 +15,62 @@
             font-family: Arial, sans-serif;
             background-color: rgb(249, 249, 249);
             color: rgb(51, 51, 51);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
         }
 
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: rgb(0, 68, 0);
+            color: rgb(255, 255, 255);
         }
 
         .header .logo {
             width: 40px;
             height: 40px;
-            background-color: rgb(0, 68, 0);
+            background-color: rgb(255, 255, 255);
             border-radius: 4px;
         }
 
-        .header .menu {
-            width: 30px;
-            height: 30px;
-            background-color: rgb(51, 51, 51);
+        .header button {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 68, 0);
+            border: none;
+            padding: 10px 15px;
             border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
+        .header button:hover {
+            background-color: rgb(228, 228, 228);
         }
 
-        p {
+        #page-home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        #page-home h1 {
+            font-size: 48px;
             margin-bottom: 20px;
+        }
+
+        #page-home p {
+            margin-bottom: 20px;
+            max-width: 600px;
             line-height: 1.6;
         }
 
-        button {
+        #page-home button {
             background-color: rgb(51, 51, 51);
             color: rgb(255, 255, 255);
             padding: 10px 20px;
@@ -71,8 +80,19 @@
             font-size: 16px;
         }
 
-        button:hover {
+        #page-home button:hover {
             background-color: rgb(85, 85, 85);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: auto;
+            margin-top: 20px;
         }
 
         .input-group {
@@ -114,51 +134,42 @@
     </style>
 </head>
 <body>
-    <div class="container" id="app">
-        <!-- Tela inicial -->
-        <div id="page-home">
-            <div class="header">
-                <div class="logo"></div>
-                <div class="menu"></div>
-            </div>
-            <h1>Vocatio</h1>
-            <p>Descubra a sua vocação!</p>
-            <p>O que é o Vocatio? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula leo eu erat pretium, vitae viverra erat condimentum.</p>
-            <button onclick="goToPage('page-register')">Iniciar Teste</button>
-        </div>
+    <div class="header">
+        <div class="logo"></div>
+        <button onclick="goToPage('page-register')">Iniciar Teste</button>
+    </div>
 
-        <!-- Tela de registro -->
-        <div id="page-register" style="display: none;">
-            <div class="header">
-                <div class="logo"></div>
-                <div class="menu"></div>
-            </div>
-            <h1>Registre-se</h1>
-            <div class="input-group">
-                <label for="name">Digite seu nome</label>
-                <input type="text" id="name">
-            </div>
-            <div class="input-group">
-                <label for="age">Sua idade</label>
-                <input type="number" id="age">
-            </div>
-            <button onclick="goToPage('page-test')">Continuar</button>
-        </div>
+    <!-- Tela inicial -->
+    <div id="page-home">
+        <h1>Vocatio</h1>
+        <p>Descubra a sua vocação!</p>
+        <p>O que é o Vocatio? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula leo eu erat pretium, vitae viverra erat condimentum.</p>
+        <button onclick="goToPage('page-register')">Iniciar Teste</button>
+    </div>
 
-        <!-- Tela do teste -->
-        <div id="page-test" style="display: none;">
-            <div class="header">
-                <div class="logo"></div>
-                <div class="menu"></div>
-            </div>
-            <h1>Teste Vocacional</h1>
-            <div class="question">
-                <p>Lorem ipsum dolor?</p>
-                <button>1. amet, consectetur adipiscing elit</button>
-                <button>2. Lectus in ullamcorper nisl</button>
-                <button>3. Magna gravida dolor sagittis</button>
-                <button>4. Habitant morbi tristique senectus</button>
-            </div>
+    <!-- Tela de registro -->
+    <div id="page-register" class="container" style="display: none;">
+        <h1>Registre-se</h1>
+        <div class="input-group">
+            <label for="name">Digite seu nome</label>
+            <input type="text" id="name">
+        </div>
+        <div class="input-group">
+            <label for="age">Sua idade</label>
+            <input type="number" id="age">
+        </div>
+        <button onclick="goToPage('page-test')">Continuar</button>
+    </div>
+
+    <!-- Tela do teste -->
+    <div id="page-test" class="container" style="display: none;">
+        <h1>Teste Vocacional</h1>
+        <div class="question">
+            <p>Lorem ipsum dolor?</p>
+            <button>1. amet, consectetur adipiscing elit</button>
+            <button>2. Lectus in ullamcorper nisl</button>
+            <button>3. Magna gravida dolor sagittis</button>
+            <button>4. Habitant morbi tristique senectus</button>
         </div>
     </div>
 

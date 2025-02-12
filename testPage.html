@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home-page.css">
+    <title>Vocatio</title>
+</head>
+<body>
+    <header>
+        <div class="left-section">
+          <p>Vocatio</p>
+        </div>
+        <div class="right-section">
+          <button onclick="goToPage('page-register')">Iniciar Teste</button>
+          <img src="images/hamburger-menu.svg">
+        </div>
+    </header>
+
+    <div id="page-test">
+        <div class="container">
+          <div class="question-box">
+  
+            <p class="question">
+              Quando te envolves em um novo projeto, qual parte mais te motiva?
+            </p>
+  
+            <ul class="options">
+              <button type="submit" class="option">a) Desenvolver algo criativo e inovador, transformando ideias em realidade</button>
+              <button type="submit" class="option">b) Organizar o projeto e definir metas claras, garantindo que tudo siga um plano</button>
+              <button type="submit" class="option">c) Assumir a liderança e tomar decisões rápidas, buscando o sucesso da equipe</button>
+              <button type="submit" class="option">d) Trabalhar em colaboração com os outros, criando um ambiente harmônico e produtivo</button>
+            </ul>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetchNextQuestion();
+        });
+        
+        function fetchNextQuestion() {
+            fetch("/get_question")
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "finished") {
+                    window.location.href = "/analyze"; // Redireciona para a análise
+                } else {
+                    document.querySelector(".question").textContent = data.question;
+                    const optionsContainer = document.querySelector(".options");
+                    optionsContainer.innerHTML = ""; // Limpa as opções anteriores
+        
+                    data.options.forEach(option => {
+                        const button = document.createElement("button");
+                        button.textContent = option;
+                        button.classList.add("option");
+                        button.onclick = () => submitAnswer(option);
+                        optionsContainer.appendChild(button);
+                    });
+                }
+            });
+        }
+        
+        function submitAnswer(answer) {
+            fetch("/submit_answer", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ answer: answer })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "finished") {
+                    window.location.href = "/analyze"; // Redireciona para análise
+                } else {
+                    fetchNextQuestion();
+                }
+            });
+        }
+        </script>
+        
+</body>
+</html>

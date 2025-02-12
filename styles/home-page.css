@@ -1,37 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+.vocatio-box{
+    height: 600px;
+    background-color: #e2e2e2;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #eef2ff;
-    color: #333;
+.subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    position: relative;
 }
 
-.header { 
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #8082FF;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+.description-box {
+    height: 300px;
 }
 
-.header img{
-    width: 250px;
-    height: auto;
-    transition: transform 0.3s;
+.description-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.description {
+    font-size: 15px;
+    width: 400px;
+    margin-left: 70px;
+}
+
+.start-test {
+    height: 200px;
+    background-color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-test button {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.start-test button:hover {
+    background-color: rgb(85, 85, 85);
 }
 
 .container {
@@ -63,19 +78,6 @@ body {
     gap: 5px; /* Espaçamento entre os botões */
   }
 
-button {
-    font-size: 15px;
-    background-color: #dce1ff;
-    color: #333;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 .header img:hover {
     transform: scale(1.1); /* Aumenta o tamanho em 10% */
