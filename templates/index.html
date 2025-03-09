@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/general.css">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/home.css">
+    <script src="/static/script.js"></script>
+    <title>Teste Vocacional</title>
+</head>
+
+<body>
+    <header>
+      <div class="left-section">
+        <p>Vocatio</p>
+      </div>
+      <div class="right-section">
+        <a href="{{ url_for('login') }}">
+          <button class="start-button">Iniciar Teste</button>
+        </a>
+        <img src="/static/images/77-773806_call-610-465-white-hamburger-menu-icon-png-removebg-preview.png">
+      </div>
+    </header>
+
+    <!--Página Inicial-->
+     <div class="home-page">
+       <section class="banner">
+          <div class="vocatio-box">
+            <h1 class="title">Vocatio</h1>
+            <p class="subtitle">Descubra a sua vocação!</p>
+            <a href="{{ url_for('login') }}">
+              <button class="start-button" id="start-button">Iniciar Teste</button>
+            </a>
+          
+            
+            <div class="clouds">
+              <svg width="100%" height="100%" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="0" cy="190" r="70" fill="#1761A0"/> <!-- Azul escuro -->
+                  <circle cx="100" cy="180" r="70" fill="#1761A0"/> 
+                  <circle cx="200" cy="140" r="100" fill="#1761A0"/> 
+                  <circle cx="300" cy="180" r="70" fill="#1761A0"/> 
+                  <circle cx="400" cy="200" r="80" fill="#1761A0"/> 
+                  <circle cx="500" cy="180" r="70" fill="#1761A0"/> 
+                  <circle cx="600" cy="150" r="100" fill="#1761A0"/> 
+                  <circle cx="700" cy="170" r="70" fill="#1761A0"/> 
+                  <circle cx="800" cy="180" r="80" fill="#1761A0"/> 
+                  <circle cx="900" cy="180" r="70" fill="#1761A0"/> 
+                  <circle cx="1000" cy="140" r="100" fill="#1761A0"/> 
+                  <circle cx="1100" cy="180" r="70" fill="#1761A0"/> 
+                  <circle cx="1200" cy="200" r="80" fill="#1761A0"/> 
+                  <circle cx="1300" cy="180" r="70" fill="#1761A0"/> 
+                  <circle cx="1400" cy="150" r="100" fill="#1761A0"/> 
+                  <circle cx="1500" cy="170" r="70" fill="#1761A0"/> 
+                  <circle cx="1600" cy="180" r="80" fill="#1761A0"/> 
+  
+                  <circle cx="0" cy="230" r="70" fill="#3A80D5"/> <!-- Azul médio -->
+                  <circle cx="100" cy="225" r="80" fill="#3A80D5"/> 
+                  <circle cx="200" cy="225" r="100" fill="#3A80D5"/> 
+                  <circle cx="300" cy="235" r="70" fill="#3A80D5"/> 
+                  <circle cx="400" cy="225" r="80" fill="#3A80D5"/> 
+                  <circle cx="500" cy="230" r="70" fill="#3A80D5"/> 
+                  <circle cx="600" cy="225" r="100" fill="#3A80D5"/> 
+                  <circle cx="700" cy="235" r="70" fill="#3A80D5"/> 
+                  <circle cx="800" cy="240" r="80" fill="#3A80D5"/> 
+                  <circle cx="900" cy="225" r="70" fill="#3A80D5"/> 
+                  <circle cx="1000" cy="220" r="100" fill="#3A80D5"/> 
+                  <circle cx="1100" cy="225" r="70" fill="#3A80D5"/> 
+                  <circle cx="1200" cy="225" r="80" fill="#3A80D5"/> 
+                  <circle cx="1300" cy="230" r="70" fill="#3A80D5"/> 
+                  <circle cx="1400" cy="235" r="100" fill="#3A80D5"/> 
+                  <circle cx="1500" cy="230" r="70" fill="#3A80D5"/> 
+                  <circle cx="1600" cy="225" r="80" fill="#3A80D5"/> 
+  
+                  <circle cx="0" cy="260" r="100" fill="white"/>  <!-- Branco -->
+                  <circle cx="100" cy="270" r="80" fill="white"/> 
+                  <circle cx="200" cy="250" r="100" fill="white"/>  
+                  <circle cx="300" cy="290" r="70" fill="white"/>  
+                  <circle cx="400" cy="260" r="80" fill="white"/> 
+                  <circle cx="500" cy="270" r="70" fill="white"/> 
+                  <circle cx="600" cy="260" r="100" fill="white"/> 
+                  <circle cx="700" cy="280" r="70" fill="white"/> 
+                  <circle cx="800" cy="260" r="80" fill="white"/> 
+                  <circle cx="900" cy="270" r="70" fill="white"/> 
+                  <circle cx="1000" cy="220" r="100" fill="white"/> 
+                  <circle cx="1100" cy="260" r="70" fill="white"/> 
+                  <circle cx="1200" cy="260" r="80" fill="white"/> 
+                  <circle cx="1300" cy="270" r="70" fill="white"/> 
+                  <circle cx="1400" cy="280" r="100" fill="white"/> 
+                  <circle cx="1500" cy="260" r="70" fill="white"/> 
+                  <circle cx="1600" cy="240" r="100" fill="white"/> 
+              </svg>
+          </div>
+       </section>
+
+       <section class="quote">
+        <p>" Nunca tivemos tantas opções para decidir nosso destino.</p>
+        <p>Nenhuma escolha será boa, porém, se não soubermos quem somos. "</p>
+        <p id="author" >- Peter Drucker</p>
+        </section>
+
+       <section class="description">
+          <div class="description-box">
+            <div class="text">
+              <p class="description-title">O que é o Vocatio?</p>
+            <p class="description-text">O Vocatio é um teste vocacional que tem como base a Teoria de Escolha de Carreira de John Holland. 
+              A partir de perguntas sobre a tua personalidade, qualidades e defeitos, habilidades naturais, sonhos e metas, o nosso o objetivo é analisar o seu perfil psicológico e a partir disso quais cursos mais combinam contigo!</p>
+            </div>
+            <div class="description-image">
+              <img src="images/RIASEC-Hexagon-5-1024x1024.png" alt="riasec-img">
+            </div>
+        </div>
+       </section>
+       
+
+        <section class="start-test">
+          <div>
+            <img src="images/an_astronaut_floating_lost_in_space_a_simple_drawn_style__2s159ebk6t2ue8u0lgsm_3-removebg-preview.png" alt="astronaut">
+          </div>
+          <div class="discover">
+            <p>Descubra qual é o curso que mais combina contigo!</p>
+            <div class="btn">
+              <a href="{{ url_for('login') }}">
+                <button class="start-button" id="start-button">Iniciar Teste</button>
+              </a>
+          </div>
+      </section>
+    
+      <footer>
+        <p>&copy 2025 - Sabrina Luz </p>
+      </footer>
+  </body>
+</html>

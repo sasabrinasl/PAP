@@ -1,0 +1,68 @@
+.right-section {
+    display: flex;
+    justify-content: end;
+}
+
+.login {
+    background-color: rgb(0, 4, 35);
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 70px 40px;
+    border: none;
+    border-radius: 20px;
+    z-index: 11;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+    gap: 40px;
+}
+
+.login h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.login button {
+    background-color: rgb(255, 191, 0);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 25px;
+}
+
+.clouds {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 10;
+}

@@ -7,7 +7,3 @@ function goToPage(pageId) {
     // Mostra a página selecionada
     document.getElementById(pageId).style.display = 'block';
 }
-
-
-        
-        

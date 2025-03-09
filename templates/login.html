@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/general.css">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/login.css">
+    <script src="/static/script.js"></script>
+    <title>Vocatio</title>
+</head>
+<body>
+    <header>
+        <div class="left-section">
+          <p>Vocatio</p>
+        </div>
+        <div class="right-section">
+          <img src="/static/images/77-773806_call-610-465-white-hamburger-menu-icon-png-removebg-preview.png">
+        </div>
+      </header>
+  
+    <section class="login">
+        <div class="login-box">
+            <h1>Registe-se</h1>
+            <form action="/register" method="POST">
+                <input type="text" id="nome" name="nome"  placeholder="Nome" required>
+                <input type="email" id="email" name="email"  placeholder="Email" required>
+                <a href="{{ url_for('test') }}">
+                    <button  type="submit">Continuar</button>
+                </a>
+            </form>
+        </div>
+        
+        <div class="clouds">
+            <svg width="100%" height="100%" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="0" cy="190" r="70" fill="#1761A0"/> <!-- Azul escuro -->
+                <circle cx="100" cy="180" r="70" fill="#1761A0"/> 
+                <circle cx="200" cy="140" r="100" fill="#1761A0"/> 
+                <circle cx="300" cy="180" r="70" fill="#1761A0"/> 
+                <circle cx="400" cy="200" r="80" fill="#1761A0"/> 
+                <circle cx="500" cy="180" r="70" fill="#1761A0"/> 
+                <circle cx="600" cy="150" r="100" fill="#1761A0"/> 
+                <circle cx="700" cy="170" r="70" fill="#1761A0"/> 
+                <circle cx="800" cy="180" r="80" fill="#1761A0"/> 
+                <circle cx="900" cy="180" r="70" fill="#1761A0"/> 
+                <circle cx="1000" cy="140" r="100" fill="#1761A0"/> 
+                <circle cx="1100" cy="180" r="70" fill="#1761A0"/> 
+                <circle cx="1200" cy="200" r="80" fill="#1761A0"/> 
+                <circle cx="1300" cy="180" r="70" fill="#1761A0"/> 
+                <circle cx="1400" cy="150" r="100" fill="#1761A0"/> 
+                <circle cx="1500" cy="170" r="70" fill="#1761A0"/> 
+                <circle cx="1600" cy="180" r="80" fill="#1761A0"/> 
+
+                <circle cx="0" cy="230" r="70" fill="#3A80D5"/> <!-- Azul médio -->
+                <circle cx="100" cy="225" r="80" fill="#3A80D5"/> 
+                <circle cx="200" cy="225" r="100" fill="#3A80D5"/> 
+                <circle cx="300" cy="235" r="70" fill="#3A80D5"/> 
+                <circle cx="400" cy="225" r="80" fill="#3A80D5"/> 
+                <circle cx="500" cy="230" r="70" fill="#3A80D5"/> 
+                <circle cx="600" cy="225" r="100" fill="#3A80D5"/> 
+                <circle cx="700" cy="235" r="70" fill="#3A80D5"/> 
+                <circle cx="800" cy="240" r="80" fill="#3A80D5"/> 
+                <circle cx="900" cy="225" r="70" fill="#3A80D5"/> 
+                <circle cx="1000" cy="220" r="100" fill="#3A80D5"/> 
+                <circle cx="1100" cy="225" r="70" fill="#3A80D5"/> 
+                <circle cx="1200" cy="225" r="80" fill="#3A80D5"/> 
+                <circle cx="1300" cy="230" r="70" fill="#3A80D5"/> 
+                <circle cx="1400" cy="235" r="100" fill="#3A80D5"/> 
+                <circle cx="1500" cy="230" r="70" fill="#3A80D5"/> 
+                <circle cx="1600" cy="225" r="80" fill="#3A80D5"/> 
+
+                <circle cx="0" cy="260" r="100" fill="white"/>  <!-- Branco -->
+                <circle cx="100" cy="270" r="80" fill="white"/> 
+                <circle cx="200" cy="250" r="100" fill="white"/>  
+                <circle cx="300" cy="290" r="70" fill="white"/>  
+                <circle cx="400" cy="260" r="80" fill="white"/> 
+                <circle cx="500" cy="270" r="70" fill="white"/> 
+                <circle cx="600" cy="260" r="100" fill="white"/> 
+                <circle cx="700" cy="280" r="70" fill="white"/> 
+                <circle cx="800" cy="260" r="80" fill="white"/> 
+                <circle cx="900" cy="270" r="70" fill="white"/> 
+                <circle cx="1000" cy="220" r="100" fill="white"/> 
+                <circle cx="1100" cy="260" r="70" fill="white"/> 
+                <circle cx="1200" cy="260" r="80" fill="white"/> 
+                <circle cx="1300" cy="270" r="70" fill="white"/> 
+                <circle cx="1400" cy="280" r="100" fill="white"/> 
+                <circle cx="1500" cy="260" r="70" fill="white"/> 
+                <circle cx="1600" cy="240" r="100" fill="white"/> 
+            </svg>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy 2025 - Sabrina Luz </p>
+      </footer>
+</body>
+</html>

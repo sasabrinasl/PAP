@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+.house {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 5px;
+}
+.hints {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.hints ul {
+    list-style-type: none;
+    padding: 0;
+}
+.hints li {
+    margin: 5px 0;
+}

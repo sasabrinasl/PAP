@@ -1,0 +1,14 @@
+.result{
+    background-color: rgb(0, 4, 35);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-text{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: end;
+}

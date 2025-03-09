@@ -1,0 +1,61 @@
+header { 
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color:  rgb(0, 4, 35);
+    box-shadow: 0 0px 10px rgba(3, 47, 188, 0.433);
+}
+
+.left-section {
+    width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.left-section p{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 50px;
+    transition: transform 0.3s;
+}
+
+.right-section {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.start-button{
+    background-color: rgb(255, 191, 0);
+    color: rgb(0, 4, 35);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+}
+
+.right-section img {
+    height: 24px;
+}
+
+header p:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    cursor: pointer; /* Aparece uma mãozinha ao passar o mouse */
+}
+
+.start-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    cursor: pointer; /* Aparece uma mãozinha ao passar o mouse */
+}
